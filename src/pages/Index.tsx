@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import ProjectHeader from '@/components/ProjectHeader';
 import ProjectSummary from '@/components/ProjectSummary';
 import DataSection from '@/components/DataSection';
-import CustomerSection from '@/components/CustomerSection';
 import EditButton from '@/components/EditButton';
 import EditForm from '@/components/EditForm';
 import { sampleProjectData, projectSections } from '@/lib/data';
@@ -38,8 +37,6 @@ const Index = () => {
         <ProjectHeader data={projectData} />
         
         <ProjectSummary data={projectData} />
-        
-        <CustomerSection data={projectData} onEdit={handleOpenEditForm} />
         
         <div className="space-y-6 mb-10">
           {projectSections.map((section, index) => (
