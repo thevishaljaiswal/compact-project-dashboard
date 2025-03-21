@@ -184,6 +184,9 @@ export interface ProjectData {
   bankName: string;
   bankAddress: string;
   ifsc: string;
+  
+  // Deviation Requests
+  deviationRequests: DeviationRequest[];
 }
 
 export interface SectionData {
@@ -197,3 +200,21 @@ export interface FieldData {
   type: 'text' | 'number' | 'date' | 'boolean' | 'percentage' | 'currency' | 'email' | 'phone';
 }
 
+export type DeviationType = 'registration' | 'possession' | 'interest-waiver';
+export type DeviationStatus = 'pending' | 'approved' | 'rejected';
+
+export interface DeviationRequest {
+  id: string;
+  type: DeviationType;
+  status: DeviationStatus;
+  requestDate: string;
+  requestedBy: string;
+  reason: string;
+  details: string;
+  approvedBy?: string;
+  approvedDate?: string;
+  approvalNotes?: string;
+  rejectedBy?: string;
+  rejectedDate?: string;
+  rejectionReason?: string;
+}

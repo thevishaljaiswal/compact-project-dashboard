@@ -6,11 +6,15 @@ import DataSection from '@/components/DataSection';
 import EditButton from '@/components/EditButton';
 import EditForm from '@/components/EditForm';
 import CustomerDetailsCard from '@/components/CustomerDetailsCard';
+import DeviationSection from '@/components/DeviationSection';
 import { sampleProjectData, projectSections } from '@/lib/data';
 import { ProjectData } from '@/lib/types';
 
 const Index = () => {
-  const [projectData, setProjectData] = useState<ProjectData>(sampleProjectData);
+  const [projectData, setProjectData] = useState<ProjectData>({
+    ...sampleProjectData,
+    deviationRequests: sampleProjectData.deviationRequests || []
+  });
   const [isEditFormOpen, setIsEditFormOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState<string | undefined>(undefined);
 
@@ -43,6 +47,9 @@ const Index = () => {
         <ProjectHeader data={projectData} />
         
         <ProjectSummary data={projectData} />
+        
+        {/* Deviation Section */}
+        <DeviationSection data={projectData} />
         
         {/* Customer Details Cards */}
         <CustomerDetailsCard 
