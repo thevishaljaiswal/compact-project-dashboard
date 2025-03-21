@@ -37,28 +37,34 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ data }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        {/* Combined Consideration Value Card */}
         <KeyMetricCard 
           label="Consideration Value" 
           value={formatCurrency(data.considerationValue)} 
+          subValue={`GST: ${data.gstPercentage}% (${formatCurrency(data.gstAmount)})`}
           className="bg-primary/5"
         />
+        
+        {/* Combined Amount Paid Card */}
         <KeyMetricCard 
           label="Amount Paid" 
           value={formatCurrency(data.paid)} 
-          subValue={`${data.paidPercentUnit}% of total`}
+          subValue={<>
+            <span className="text-green-600 font-medium">{data.paidPercentUnit}%</span> of total • 
+            Unit: {formatCurrency(data.paidUnit)} • GST: {formatCurrency(data.paidGST)}
+          </>}
           className="bg-green-500/5"
         />
+        
+        {/* Combined Balance Card */}
         <KeyMetricCard 
           label="Balance" 
           value={formatCurrency(data.balance)} 
+          subValue={<>
+            Unit: {formatCurrency(data.balanceUnit)} • GST: {formatCurrency(data.balanceGST)}
+          </>}
           className="bg-amber-500/5"
-        />
-        <KeyMetricCard 
-          label="Area" 
-          value={`${data.saleableArea} sq.ft`} 
-          subValue={`Carpet: ${data.carpetArea} sq.ft`}
-          className="bg-blue-500/5"
         />
       </div>
     </div>
@@ -68,7 +74,7 @@ const ProjectHeader: React.FC<ProjectHeaderProps> = ({ data }) => {
 interface KeyMetricCardProps {
   label: string;
   value: string;
-  subValue?: string;
+  subValue?: string | React.ReactNode;
   className?: string;
 }
 
