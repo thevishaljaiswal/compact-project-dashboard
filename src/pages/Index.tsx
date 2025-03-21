@@ -5,6 +5,7 @@ import ProjectSummary from '@/components/ProjectSummary';
 import DataSection from '@/components/DataSection';
 import EditButton from '@/components/EditButton';
 import EditForm from '@/components/EditForm';
+import CustomerDetailsCard from '@/components/CustomerDetailsCard';
 import { sampleProjectData, projectSections } from '@/lib/data';
 import { ProjectData } from '@/lib/types';
 
@@ -27,6 +28,11 @@ const Index = () => {
     setProjectData(updatedData);
   };
 
+  // Filter out the sections we're displaying separately in cards
+  const filteredSections = projectSections.filter(section => 
+    !['Customer Information', 'Children Information', 'Bank Details'].includes(section.title)
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-secondary/50">
       <div className="container mx-auto py-6 px-4 sm:px-6">
@@ -38,8 +44,14 @@ const Index = () => {
         
         <ProjectSummary data={projectData} />
         
+        {/* Customer Details Cards */}
+        <CustomerDetailsCard 
+          data={projectData}
+          onEdit={handleOpenEditForm}
+        />
+        
         <div className="space-y-6 mb-10">
-          {projectSections.map((section, index) => (
+          {filteredSections.map((section, index) => (
             <DataSection
               key={index}
               title={section.title}

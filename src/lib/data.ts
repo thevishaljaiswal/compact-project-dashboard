@@ -1,4 +1,3 @@
-
 import { ProjectData, SectionData } from './types';
 
 export const sampleProjectData: ProjectData = {
@@ -147,7 +146,45 @@ export const sampleProjectData: ProjectData = {
   registrationDelayApprNo: "",
   applicantApprNo: "APP-4567",
   cashbackEligible: true,
-  selfFund: false
+  selfFund: false,
+  
+  // New Customer Details
+  customerCountry: "India",
+  customerState: "Maharashtra",
+  customerCity: "Mumbai",
+  customerMobile: "9876543210",
+  customerMobile2: "9876543211",
+  customerEmail: "john.smith@example.com",
+  customerAddress: "123 Happy Homes, Bandra West, Mumbai 400050",
+  customerAadhar: "XXXX-XXXX-XXXX-5678",
+  customerDOB: "1985-06-15",
+  customerAge: 38,
+  customerOccupation: "Software Engineer",
+  
+  // Children Details
+  maritalStatus: "Married",
+  anniversary: "2010-10-10",
+  haveChildren: true,
+  numberOfChildren: 2,
+  child1Name: "James Smith",
+  child1DOB: "2012-05-20",
+  child1Academy: "Bright Star School",
+  child1Gender: "Male",
+  child2Name: "Emily Smith",
+  child2DOB: "2015-03-15",
+  child2Academy: "Little Angels Academy",
+  child2Gender: "Female",
+  child3Name: "",
+  child3DOB: "",
+  child3Academy: "",
+  child3Gender: "",
+  
+  // Bank Details
+  accountHolder: "John Smith",
+  accountNumber: "XXXXX7890",
+  bankName: "HDFC Bank",
+  bankAddress: "Bandra Branch, Mumbai 400050",
+  ifsc: "HDFC0001234"
 };
 
 export const projectSections: SectionData[] = [
@@ -330,5 +367,55 @@ export const projectSections: SectionData[] = [
       { key: "warrantyExtended", label: "Warranty Extended", type: "boolean" },
       { key: "warrantyExtendedAt", label: "Warranty Extended At", type: "date" },
     ]
+  },
+  {
+    title: "Customer Information",
+    fields: [
+      { key: "customerName", label: "Customer Name", type: "text" },
+      { key: "customerCountry", label: "Customer Country", type: "text" },
+      { key: "customerState", label: "Customer State", type: "text" },
+      { key: "customerCity", label: "Customer City", type: "text" },
+      { key: "customerMobile", label: "Customer Mobile", type: "phone" },
+      { key: "customerMobile2", label: "Customer Mobile2", type: "phone" },
+      { key: "customerEmail", label: "Customer Email", type: "email" },
+      { key: "customerAddress", label: "Customer Address", type: "text" },
+      { key: "customerPAN", label: "Customer PAN", type: "text" },
+      { key: "customerAadhar", label: "Customer Aadhar", type: "text" },
+      { key: "customerDOB", label: "Customer DOB", type: "date" },
+      { key: "customerAge", label: "Customer Age", type: "number" },
+      { key: "customerOccupation", label: "Customer Occupation", type: "text" },
+    ]
+  },
+  {
+    title: "Children Information",
+    fields: [
+      { key: "maritalStatus", label: "Marital Status", type: "text" },
+      { key: "anniversary", label: "Anniversary", type: "date" },
+      { key: "haveChildren", label: "Have Children", type: "boolean" },
+      { key: "numberOfChildren", label: "No. of Child", type: "number" },
+      { key: "child1Name", label: "Child1 Name", type: "text" },
+      { key: "child1DOB", label: "Child1 DOB", type: "date" },
+      { key: "child1Academy", label: "Child1 Academy", type: "text" },
+      { key: "child1Gender", label: "Child1 Gender", type: "text" },
+      { key: "child2Name", label: "Child2 Name", type: "text" },
+      { key: "child2DOB", label: "Child2 DOB", type: "date" },
+      { key: "child2Academy", label: "Child2 Academy", type: "text" },
+      { key: "child2Gender", label: "Child2 Gender", type: "text" },
+      { key: "child3Name", label: "Child3 Name", type: "text" },
+      { key: "child3DOB", label: "Child3 DOB", type: "date" },
+      { key: "child3Academy", label: "Child3 Academy", type: "text" },
+      { key: "child3Gender", label: "Child3 Gender", type: "text" },
+    ]
+  },
+  {
+    title: "Bank Details",
+    fields: [
+      { key: "accountHolder", label: "Account Holder", type: "text" },
+      { key: "accountNumber", label: "Account Number", type: "text" },
+      { key: "bankName", label: "Bank Name", type: "text" },
+      { key: "bankAddress", label: "Bank Address", type: "text" },
+      { key: "ifsc", label: "IFSC", type: "text" },
+    ]
   }
 ];
+

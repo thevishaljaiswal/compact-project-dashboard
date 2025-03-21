@@ -146,6 +146,44 @@ export interface ProjectData {
   applicantApprNo: string;
   cashbackEligible: boolean;
   selfFund: boolean;
+  
+  // New Customer Details
+  customerCountry: string;
+  customerState: string;
+  customerCity: string;
+  customerMobile: string;
+  customerMobile2: string;
+  customerEmail: string;
+  customerAddress: string;
+  customerAadhar: string;
+  customerDOB: string;
+  customerAge: number;
+  customerOccupation: string;
+  
+  // Children Details
+  maritalStatus: string;
+  anniversary: string;
+  haveChildren: boolean;
+  numberOfChildren: number;
+  child1Name: string;
+  child1DOB: string;
+  child1Academy: string;
+  child1Gender: string;
+  child2Name: string;
+  child2DOB: string;
+  child2Academy: string;
+  child2Gender: string;
+  child3Name: string;
+  child3DOB: string;
+  child3Academy: string;
+  child3Gender: string;
+  
+  // Bank Details
+  accountHolder: string;
+  accountNumber: string;
+  bankName: string;
+  bankAddress: string;
+  ifsc: string;
 }
 
 export interface SectionData {
@@ -158,3 +196,4 @@ export interface FieldData {
   label: string;
   type: 'text' | 'number' | 'date' | 'boolean' | 'percentage' | 'currency' | 'email' | 'phone';
 }
+
