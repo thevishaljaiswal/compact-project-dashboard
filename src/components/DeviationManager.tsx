@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { DeviationRequest, DeviationType, ProjectData } from '@/lib/types';
+import { DeviationRequest, DeviationType, DeviationStatus, ProjectData } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
@@ -78,7 +78,7 @@ const DeviationManager: React.FC<DeviationManagerProps> = ({
       if (req.id === selectedRequestId) {
         return {
           ...req,
-          status: 'approved',
+          status: 'approved' as DeviationStatus,
           approvedBy: currentUserName,
           approvedDate: new Date().toISOString(),
           approvalNotes: approvalNotes
@@ -108,7 +108,7 @@ const DeviationManager: React.FC<DeviationManagerProps> = ({
       if (req.id === selectedRequestId) {
         return {
           ...req,
-          status: 'rejected',
+          status: 'rejected' as DeviationStatus,
           rejectedBy: currentUserName,
           rejectedDate: new Date().toISOString(),
           rejectionReason: rejectionReason

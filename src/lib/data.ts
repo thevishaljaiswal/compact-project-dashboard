@@ -184,7 +184,10 @@ export const sampleProjectData: ProjectData = {
   accountNumber: "XXXXX7890",
   bankName: "HDFC Bank",
   bankAddress: "Bandra Branch, Mumbai 400050",
-  ifsc: "HDFC0001234"
+  ifsc: "HDFC0001234",
+  
+  // Deviation Requests
+  deviationRequests: []
 };
 
 export const projectSections: SectionData[] = [
@@ -418,4 +421,3 @@ export const projectSections: SectionData[] = [
     ]
   }
 ];
-

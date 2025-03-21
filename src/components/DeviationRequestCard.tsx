@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { DeviationRequest, DeviationType } from '@/lib/types';
+import { DeviationRequest, DeviationType, DeviationStatus } from '@/lib/types';
 import { formatDate } from '@/lib/utils';
 import { AlertCircle, Clock, CheckCircle, XCircle } from 'lucide-react';
 import { 

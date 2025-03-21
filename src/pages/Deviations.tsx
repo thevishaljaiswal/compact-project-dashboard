@@ -9,10 +9,7 @@ import { ProjectData } from '@/lib/types';
 
 const Deviations = () => {
   const navigate = useNavigate();
-  const [projectData, setProjectData] = React.useState<ProjectData>({
-    ...sampleProjectData,
-    deviationRequests: sampleProjectData.deviationRequests || []
-  });
+  const [projectData, setProjectData] = React.useState<ProjectData>(sampleProjectData);
 
   const handleUpdateData = (updatedData: ProjectData) => {
     setProjectData(updatedData);
