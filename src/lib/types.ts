@@ -1,4 +1,3 @@
-
 export interface ProjectData {
   projectName: string;
   building: string;
@@ -107,6 +106,17 @@ export interface ProjectData {
   channelPartnerName: string;
   virtualAccount: string;
   taxVirtualAccount: string;
+  
+  // Contact Information
+  mobilePrimary: string;
+  emailPrimary: string;
+  mobileAlternate1: string;
+  emailAlternate1: string;
+  mobileAlternate2: string;
+  emailAlternate2: string;
+  mobileAlternate3: string;
+  emailAlternate3: string;
+  customerGSTIN: string;
   
   // Customer Details
   customerNo: string;
