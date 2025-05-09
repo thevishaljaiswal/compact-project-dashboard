@@ -1,4 +1,3 @@
-
 export interface ProjectData {
   projectName: string;
   building: string;
@@ -187,6 +186,9 @@ export interface ProjectData {
   
   // Deviation Requests
   deviationRequests: DeviationRequest[];
+  
+  // Tickets/Issues
+  tickets: Ticket[];
 }
 
 export interface SectionData {
@@ -217,4 +219,23 @@ export interface DeviationRequest {
   rejectedBy?: string;
   rejectedDate?: string;
   rejectionReason?: string;
+}
+
+export type TicketSource = 'email' | 'call' | 'mobile-app';
+export type TicketStatus = 'open' | 'in-progress' | 'resolved' | 'closed';
+export type TicketPriority = 'low' | 'medium' | 'high' | 'critical';
+
+export interface Ticket {
+  id: string;
+  title: string;
+  description: string;
+  source: TicketSource;
+  status: TicketStatus;
+  priority: TicketPriority;
+  createdAt: string;
+  createdBy: string;
+  assignedTo?: string;
+  resolvedAt?: string;
+  resolvedBy?: string;
+  category: string;
 }

@@ -7,14 +7,12 @@ import EditButton from '@/components/EditButton';
 import EditForm from '@/components/EditForm';
 import CustomerDetailsCard from '@/components/CustomerDetailsCard';
 import DeviationSection from '@/components/DeviationSection';
+import RecentTicketsSection from '@/components/RecentTicketsSection';
 import { sampleProjectData, projectSections } from '@/lib/data';
 import { ProjectData } from '@/lib/types';
 
 const Index = () => {
-  const [projectData, setProjectData] = useState<ProjectData>({
-    ...sampleProjectData,
-    deviationRequests: sampleProjectData.deviationRequests || []
-  });
+  const [projectData, setProjectData] = useState<ProjectData>(sampleProjectData);
   const [isEditFormOpen, setIsEditFormOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState<string | undefined>(undefined);
 
@@ -43,6 +41,9 @@ const Index = () => {
         <div className="flex justify-end mb-4">
           <EditButton onClick={() => handleOpenEditForm()} />
         </div>
+        
+        {/* Recent Tickets Section - Added at the top */}
+        <RecentTicketsSection data={projectData} />
         
         <ProjectHeader data={projectData} />
         

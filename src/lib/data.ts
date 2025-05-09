@@ -187,7 +187,73 @@ export const sampleProjectData: ProjectData = {
   ifsc: "HDFC0001234",
   
   // Deviation Requests
-  deviationRequests: []
+  deviationRequests: [],
+  
+  // Customer Tickets
+  tickets: [
+    {
+      id: '1',
+      title: 'Complaint about construction noise',
+      description: 'Customer is complaining about excessive noise from the construction site during early morning hours.',
+      source: 'email',
+      status: 'resolved',
+      priority: 'medium',
+      createdAt: '2025-04-23T10:23:45.000Z',
+      createdBy: 'John Doe',
+      assignedTo: 'Site Manager',
+      resolvedAt: '2025-04-25T15:30:12.000Z',
+      resolvedBy: 'Site Manager',
+      category: 'Noise Complaint'
+    },
+    {
+      id: '2',
+      title: 'Water leakage in bathroom',
+      description: 'Customer reported water leakage from ceiling in the master bathroom.',
+      source: 'call',
+      status: 'in-progress',
+      priority: 'high',
+      createdAt: '2025-05-02T14:12:33.000Z',
+      createdBy: 'John Doe',
+      assignedTo: 'Maintenance Team',
+      category: 'Plumbing Issue'
+    },
+    {
+      id: '3',
+      title: 'Request for payment schedule adjustment',
+      description: 'Customer wants to change the payment schedule due to financial constraints.',
+      source: 'mobile-app',
+      status: 'open',
+      priority: 'medium',
+      createdAt: '2025-05-07T09:45:21.000Z',
+      createdBy: 'John Doe',
+      category: 'Payment'
+    },
+    {
+      id: '4',
+      title: 'Question about amenities access',
+      description: 'Customer is asking about when they will get access to the clubhouse and swimming pool.',
+      source: 'email',
+      status: 'closed',
+      priority: 'low',
+      createdAt: '2025-04-15T16:30:00.000Z',
+      createdBy: 'John Doe',
+      resolvedAt: '2025-04-16T11:20:45.000Z',
+      resolvedBy: 'Customer Relations',
+      category: 'Amenities'
+    },
+    {
+      id: '5',
+      title: 'Parking slot allocation issue',
+      description: 'Customer is disputing the allocated parking slot and requesting a change.',
+      source: 'call',
+      status: 'in-progress',
+      priority: 'high',
+      createdAt: '2025-05-05T13:15:27.000Z',
+      createdBy: 'John Doe',
+      assignedTo: 'Property Manager',
+      category: 'Parking'
+    }
+  ]
 };
 
 export const projectSections: SectionData[] = [
