@@ -8,6 +8,7 @@ import EditForm from '@/components/EditForm';
 import CustomerDetailsCard from '@/components/CustomerDetailsCard';
 import DeviationSection from '@/components/DeviationSection';
 import RecentTicketsSection from '@/components/RecentTicketsSection';
+import CashbackKPISection from '@/components/CashbackKPISection';
 import { sampleProjectData, projectSections } from '@/lib/data';
 import { ProjectData } from '@/lib/types';
 
@@ -44,6 +45,9 @@ const Index = () => {
         
         {/* Recent Tickets Section - Added at the top */}
         <RecentTicketsSection data={projectData} />
+        
+        {/* Cashback KPI Section - Added after tickets */}
+        <CashbackKPISection data={projectData} />
         
         <ProjectHeader data={projectData} />
         

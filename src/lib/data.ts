@@ -253,6 +253,40 @@ export const sampleProjectData: ProjectData = {
       assignedTo: 'Property Manager',
       category: 'Parking'
     }
+  ],
+  
+  // Add cashback KPIs data
+  cashbackKPIs: [
+    {
+      title: "On Time Registration",
+      description: "Complete registration within agreed timeline",
+      isAchieved: true,
+      deadline: "2024-03-15",
+      completedDate: "2024-03-10",
+      reward: 25000
+    },
+    {
+      title: "On Time Payment - 30%",
+      description: "Pay 30% of total amount on schedule",
+      isAchieved: true,
+      deadline: "2024-02-01",
+      completedDate: "2024-01-28",
+      reward: 15000
+    },
+    {
+      title: "On Time Payment - 60%",
+      description: "Pay 60% of total amount on schedule",
+      isAchieved: false,
+      deadline: "2024-06-01",
+      reward: 20000
+    },
+    {
+      title: "On Time Payment - 95%",
+      description: "Pay 95% of total amount on schedule",
+      isAchieved: false,
+      deadline: "2024-12-01",
+      reward: 30000
+    }
   ]
 };
 

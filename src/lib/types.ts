@@ -189,6 +189,9 @@ export interface ProjectData {
   
   // Tickets/Issues
   tickets: Ticket[];
+  
+  // Add cashback KPIs
+  cashbackKPIs: CashbackKPI[];
 }
 
 export interface SectionData {
@@ -238,4 +241,13 @@ export interface Ticket {
   resolvedAt?: string;
   resolvedBy?: string;
   category: string;
+}
+
+export interface CashbackKPI {
+  title: string;
+  description: string;
+  isAchieved: boolean;
+  deadline?: string;
+  completedDate?: string;
+  reward?: number;
 }
